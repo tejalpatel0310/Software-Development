@@ -1,3 +1,4 @@
+##app.py consist Flask API must run before running server
 from flask import Flask,jsonify,request
 import pandas as pd
 import sqlite3 as sql
