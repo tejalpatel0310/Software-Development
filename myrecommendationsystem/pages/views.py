@@ -1,9 +1,10 @@
+from django.http import Http404
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import authenticate, login, logout
-from .forms import UserForm,ContactUsForm
+from .forms import UserForm
 from django.db.models import Q
 from django.contrib import messages
-from .models import Contactus,Places,Myrating
+from .models import Places,Myrating
 import requests
 from django.contrib.auth.decorators import login_required
 from ast import literal_eval as make_tuple
@@ -43,18 +44,6 @@ def rating(request, place_id):
 
 def about(request):
     return render(request,"aboutus.html",{})
-
-def contact(request):
-    my_form = ContactUsForm(request.GET)
-    if request.method=="POST":
-        my_form = ContactUsForm(request.POST)
-        if my_form.is_valid():
-            Contactus.objects.create(**my_form.cleaned_data)
-            return redirect("contact")
-
-
-    context = {"form":my_form}
-    return render(request,"contactus.html",context)
 
 def register(request):
     form = UserForm()

@@ -1,6 +1,7 @@
 {%load static%}
 
 {%include 'nav.html'%}
+<h1>Explore India</h1>
 {%include 'search.html'%}
 <!--    <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">-->
 
@@ -30,7 +31,7 @@
 
 <section class="container-fluid">
 
-    <h1>Tourist Places of Nepal</h1>
+
  <div class="row">
 
     {% for place in context %}
@@ -38,7 +39,7 @@
             <div class="img-thumbnail">
                <div class="mid"> <h4>{{place.name}}</h4></div>
                     <div class="img-fluid">
-                    <img src="{{place.image.url}} " class="img-responsive">
+                    <img src="{{place.image.url}}" style = "max-width: 100%"  class="img-responsive">
                     </div><br>
 
                 <div class="caption">

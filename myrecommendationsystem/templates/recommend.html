@@ -30,7 +30,7 @@
 
 <section class="container-fluid">
 
-    <h1>Recommendated places for you . . .</h1>
+    <h1>Recommended places for you . . .</h1>
  <div class="row">
 
     {% for place in context %}
@@ -38,7 +38,7 @@
             <div class="img-thumbnail">
                <div class="mid"> <h4>{{place.name}}</h4></div>
                     <div class="img-fluid">
-                    <img src="{{place.image.url}} " class="img-responsive">
+                    <img src="{{place.image.url}} " style = "max-width: 100%" class="img-responsive">
                     </div><br>
 
                 <div class="caption">

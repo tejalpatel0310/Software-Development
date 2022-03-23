@@ -19,9 +19,3 @@ class Myrating(models.Model):
 
 
 # Create your models here.
-
-class Contactus(models.Model):
-    name = models.CharField(max_length=50,null=True,blank=True)
-    emails = models.EmailField(max_length=200,null=True,blank=True)
-    subjects = models.CharField(max_length=100,null=True,blank=True)
-    descriptions = models.CharField(max_length=400,null=True,blank=True)
